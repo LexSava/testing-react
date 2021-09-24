@@ -3,14 +3,13 @@ interface IList {
   }
 
 const List: React.FC<IList> = (props) => {
-    const {items = [] }:any = props;
 
-    if (!items.length) return null;
+    if (!props.items.length) return null;
     
     return (
         <ul className="list">
             {
-            items.map((el: any) => ( 
+            props.items.map((el: any) => ( 
               <li key={el}> {el} </li>
             ))
             }
