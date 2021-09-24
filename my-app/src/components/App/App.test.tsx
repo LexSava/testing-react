@@ -40,4 +40,4 @@ describe('App component', () => {
 
         expect(app).toMatchSnapshot();
     })
-})
+});
