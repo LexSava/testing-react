@@ -7,9 +7,9 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   sonarcloud:
-    name: SonarCloud
     runs-on: ubuntu-latest
     steps:
+      - name: SonarCloud Scan
         uses: LexSava/testing-react@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
